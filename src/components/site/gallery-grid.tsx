@@ -1,0 +1,2 @@
+import Image from "next/image";
+export function GalleryGrid({images}:{images:{src:string;alt:string}[]}){return <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">{images.map((img,i)=><div key={`${img.src}-${i}`} className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-navy-mist"><Image src={img.src} alt={img.alt} fill className="object-cover transition-transform duration-500 hover:scale-105" sizes="(max-width:768px) 50vw,25vw"/></div>)}</div>}

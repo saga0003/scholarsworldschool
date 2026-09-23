@@ -1,0 +1,7 @@
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X, Phone } from "lucide-react";
+import { useState } from "react";
+import { NAV_LINKS, SCHOOL } from "@/lib/site-data";
+export function Navbar(){const [open,setOpen]=useState(false);return <header className="sticky top-0 z-50 bg-navy text-white shadow-lg"><div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5"><Link href="/" className="flex items-center gap-3"><Image src="https://scholarshassan.com/img/02%20%281%29.png" alt="Scholars'" width={70} height={42} className="h-10 w-auto brightness-0 invert"/><span className="hidden font-display text-xl font-bold sm:block">Scholars&apos;</span></Link><nav className="hidden items-center gap-7 lg:flex">{NAV_LINKS.map(n=><Link key={n.href} href={n.href} className="text-sm font-semibold text-white/85 hover:text-gold">{n.label}</Link>)}<Link href="/apply" className="rounded-full bg-gold px-5 py-2.5 font-bold text-navy">Apply Online</Link></nav><button className="lg:hidden" onClick={()=>setOpen(!open)} aria-label="Menu">{open?<X/>:<Menu/>}</button></div>{open&&<div className="border-t border-white/10 bg-navy px-5 py-4 lg:hidden">{NAV_LINKS.map(n=><Link onClick={()=>setOpen(false)} key={n.href} href={n.href} className="block border-b border-white/10 py-3 font-semibold">{n.label}</Link>)}<a href={SCHOOL.phoneHref} className="mt-4 flex items-center gap-2 text-gold"><Phone className="h-4 w-4"/>{SCHOOL.phone}</a></div>}</header>}
