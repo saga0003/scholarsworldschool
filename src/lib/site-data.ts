@@ -18,12 +18,39 @@ export const SCHOOL = {
   ],
 };
 
-export const NAV_LINKS = [
+export type NavChild = { label: string; href: string; note?: string };
+export type NavLink = { label: string; href: string; children?: NavChild[] };
+
+export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Academics", href: "/academics" },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "About Us", href: "/about", note: "Our story & mission" },
+      { label: "Secretary's Message", href: "/leadership/secretary", note: "Leadership message" },
+      { label: "Principal's Message", href: "/leadership/principal", note: "From the Principal" },
+    ],
+  },
+  {
+    label: "Academics",
+    href: "/academics",
+    children: [
+      { label: "Montessori", href: "/academics/montessori", note: "Early years" },
+      { label: "Primary School", href: "/academics/primary", note: "Foundational years" },
+      { label: "Higher Primary", href: "/academics/higher-primary", note: "Middle school" },
+      { label: "High School", href: "/academics/high-school", note: "Senior years" },
+    ],
+  },
   { label: "Facilities", href: "/facilities" },
-  { label: "Gallery", href: "/gallery" },
+  {
+    label: "Gallery",
+    href: "/gallery",
+    children: [
+      { label: "Photo Gallery", href: "/gallery", note: "Life in frames" },
+      { label: "Videos", href: "/gallery/videos", note: "Watch campus life" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
 
