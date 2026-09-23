@@ -31,6 +31,7 @@ export function ProgramPage({ program }: { program: Program }) {
           tall
         />
 
+        {/* Highlights — icon chips, no walls of text */}
         <section className="bg-white py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-5 sm:px-6">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -40,7 +41,9 @@ export function ProgramPage({ program }: { program: Program }) {
                     <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-navy text-gold">
                       <Check className="h-5 w-5" />
                     </span>
-                    <p className="text-[15px] font-bold leading-snug text-navy">{chip}</p>
+                    <p className="text-[15px] font-bold leading-snug text-navy">
+                      {chip}
+                    </p>
                   </div>
                 </Reveal>
               ))}
@@ -48,6 +51,7 @@ export function ProgramPage({ program }: { program: Program }) {
           </div>
         </section>
 
+        {/* Program at a glance — collage on white */}
         <section className="bg-cream py-16 lg:py-24">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16">
             <Reveal>
@@ -77,7 +81,9 @@ export function ProgramPage({ program }: { program: Program }) {
                 </h2>
               </Reveal>
               <Reveal delay={0.14}>
-                <p className="mt-5 leading-relaxed text-muted-foreground">{program.intro}</p>
+                <p className="mt-5 leading-relaxed text-muted-foreground">
+                  {program.intro}
+                </p>
               </Reveal>
               <Reveal delay={0.2}>
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -100,6 +106,7 @@ export function ProgramPage({ program }: { program: Program }) {
           </div>
         </section>
 
+        {/* Photo grid */}
         <section className="bg-white py-16 lg:py-24">
           <div className="mx-auto max-w-7xl px-5 sm:px-6">
             <div className="mx-auto max-w-3xl text-center">
@@ -124,14 +131,22 @@ export function ProgramPage({ program }: { program: Program }) {
           </div>
         </section>
 
+        {/* Next stage / other programs */}
         <section className="bg-cream py-16 lg:py-20">
           <div className="mx-auto max-w-7xl px-5 sm:px-6">
             <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
               <div>
-                <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">Continue the journey</h2>
-                <p className="mt-1 text-muted-foreground">Every stage builds on the one before it.</p>
+                <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">
+                  Continue the journey
+                </h2>
+                <p className="mt-1 text-muted-foreground">
+                  Every stage builds on the one before it.
+                </p>
               </div>
-              <Link href="/academics" className="group inline-flex items-center gap-2 text-sm font-bold text-navy">
+              <Link
+                href="/academics"
+                className="group inline-flex items-center gap-2 text-sm font-bold text-navy"
+              >
                 All programs
                 <ArrowRight className="h-4 w-4 text-gold-deep transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
@@ -154,8 +169,12 @@ export function ProgramPage({ program }: { program: Program }) {
                     <div className={cn("absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/30 to-transparent")} />
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-5">
                       <div>
-                        <p className="text-[11px] font-extrabold uppercase tracking-wider text-gold">{p.kicker}</p>
-                        <p className="mt-1 font-display text-xl font-bold text-white">{p.label}</p>
+                        <p className="text-[11px] font-extrabold uppercase tracking-wider text-gold">
+                          {p.kicker}
+                        </p>
+                        <p className="mt-1 font-display text-xl font-bold text-white">
+                          {p.label}
+                        </p>
                       </div>
                       <ArrowRight className="h-5 w-5 text-gold transition-transform duration-300 group-hover:translate-x-1.5" />
                     </div>
