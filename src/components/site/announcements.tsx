@@ -15,7 +15,10 @@ export function Announcements() {
         <div className="relative flex-1 overflow-hidden">
           <div className="animate-marquee flex w-max items-center">
             {items.map((text, i) => (
-              <span key={i} className="flex items-center gap-3 whitespace-nowrap px-8 py-3 text-sm font-semibold text-navy">
+              <span
+                key={i}
+                className="flex items-center gap-3 whitespace-nowrap px-8 py-3 text-sm font-semibold text-navy"
+              >
                 <Sparkles className="h-3.5 w-3.5 text-navy/60" />
                 {text}
               </span>
