@@ -35,6 +35,7 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-[100svh] overflow-hidden bg-navy-deep">
+      {/* Background slides */}
       <AnimatePresence mode="popLayout">
         <motion.div
           key={index}
@@ -57,6 +58,7 @@ export function Hero() {
         </motion.div>
       </AnimatePresence>
 
+      {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-28 pt-44 sm:px-6 lg:pb-32">
         <div className="max-w-3xl">
           <AnimatePresence mode="wait">
@@ -133,6 +135,7 @@ export function Hero() {
           </AnimatePresence>
         </div>
 
+        {/* Stats bar */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -152,6 +155,7 @@ export function Hero() {
         </motion.div>
       </div>
 
+      {/* Slider controls */}
       <div className="absolute bottom-24 right-6 z-20 hidden items-center gap-2 sm:flex lg:bottom-28">
         <button
           onClick={prev}
@@ -176,6 +180,7 @@ export function Hero() {
         </button>
       </div>
 
+      {/* Progress dots */}
       <div className="absolute bottom-24 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 sm:left-6 sm:translate-x-0 lg:bottom-28">
         {HERO_SLIDES.map((_, i) => (
           <button
