@@ -18,6 +18,7 @@ const assetRewrites = [
 ] as const;
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "scholarshassan.com" },
