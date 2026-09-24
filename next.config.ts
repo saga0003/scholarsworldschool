@@ -9,6 +9,8 @@ const assetRewrites = [
   ["/images/program-primary.jpg", "https://scholarshassan.com/img/primarysch.png"],
   ["/images/program-higherprimary.jpg", "https://scholarshassan.com/img/higherpri.png"],
   ["/images/program-highschool.jpg", "https://scholarshassan.com/img/highschool.png"],
+  ["/images/logo-mark-white.png", "https://scholarshassan.com/img/02%20%281%29.png"],
+  ["/images/logo-white.png", "https://scholarshassan.com/img/LOGO%20WHITE.png"],
   ["/images/logo-mark.png", "https://scholarshassan.com/img/02%20%281%29.png"],
   ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 16, 18, 19, 20].map(
     (n) => [`/images/gallery-${n}.jpg`, `https://scholarshassan.com/img/${n}.png`]
