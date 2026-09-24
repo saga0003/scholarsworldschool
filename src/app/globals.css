@@ -243,8 +243,8 @@
   animation: kenburns 9s ease-out forwards;
 }
 
-/* Deployment compatibility: the ZIP's white navbar mark is the original
-   02 (1).png artwork rendered as white. Keep the source component untouched. */
-header img[src="/images/logo-mark-white.png"] {
+/* Deployment compatibility only: the ZIP uses a white derivative of the same
+   original school mark. This targets the home-link mark after next/image optimization. */
+header nav a[aria-label="Scholars' School — home"] img {
   filter: brightness(0) invert(1);
 }
