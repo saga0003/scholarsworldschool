@@ -242,9 +242,3 @@
 .animate-kenburns {
   animation: kenburns 9s ease-out forwards;
 }
-
-/* Deployment compatibility only: the ZIP uses a white derivative of the same
-   original school mark. This targets the home-link mark after next/image optimization. */
-header nav a[aria-label="Scholars' School — home"] img {
-  filter: brightness(0) invert(1);
-}
