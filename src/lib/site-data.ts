@@ -43,6 +43,7 @@ export const SCHOOL = {
   ],
 };
 
+// ---------- Navigation (route-based, mirrors the original site structure) ----------
 export type NavChild = { label: string; href: string; note?: string };
 export type NavLink = {
   label: string;
@@ -87,9 +88,10 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Contact", href: "/contact" },
 ];
 
+// ---------- Home hero ----------
 export const HERO_SLIDES = [
   {
-    image: "https://scholarshassan.com/img/home-welcome.jpg",
+    image: "/images/hero-campus.jpg",
     eyebrow: "Welcome to Scholars'",
     pre: "Where",
     highlight: "Infinite Potential",
@@ -100,7 +102,7 @@ export const HERO_SLIDES = [
     secondaryCta: { label: "Explore Our World", href: "/about" },
   },
   {
-    image: "https://scholarshassan.com/img/abt%20us.jpg",
+    image: "/images/about-students.jpg",
     eyebrow: "Learning That Celebrates",
     pre: "Joy, Confidence &",
     highlight: "Curiosity",
@@ -111,7 +113,7 @@ export const HERO_SLIDES = [
     secondaryCta: { label: "Visit Our Campus", href: "/contact" },
   },
   {
-    image: "https://scholarshassan.com/img/Mission.JPG",
+    image: "/images/trust-event.jpg",
     eyebrow: "A Legacy of Trust",
     pre: "Guided by the",
     highlight: "Puttu Education Trust",
@@ -137,6 +139,7 @@ export const ANNOUNCEMENTS = [
   "Visit our Mahalakshmi Layout or Northern Extension campus",
 ];
 
+// ---------- Programs (one dedicated page each) ----------
 export type Program = {
   id: string;
   label: string;
@@ -159,8 +162,8 @@ export const PROGRAMS: Program[] = [
     title: "Italian-Style Montessori",
     headline: "Where curiosity meets learning",
     href: "/academics/montessori",
-    heroImage: "https://scholarshassan.com/img/9.png",
-    collageImage: "https://scholarshassan.com/img/montes.png",
+    heroImage: "/images/gallery-9.jpg",
+    collageImage: "/images/program-montessori.jpg",
     intro:
       "An inspiring, hands-on start to education — children learn through self-directed discovery in beautifully prepared environments.",
     chips: [
@@ -170,12 +173,12 @@ export const PROGRAMS: Program[] = [
       "Independence & respect",
     ],
     images: [
-      { src: "https://scholarshassan.com/img/9.png", alt: "Practising with knobbed cylinders" },
-      { src: "https://scholarshassan.com/img/6.png", alt: "Building the pink tower, layer by layer" },
-      { src: "https://scholarshassan.com/img/13.png", alt: "Matching sandpaper letters" },
-      { src: "https://scholarshassan.com/img/19.png", alt: "Mastering the dressing frame" },
-      { src: "https://scholarshassan.com/img/5.png", alt: "Working with a tree puzzle" },
-      { src: "https://scholarshassan.com/img/3.png", alt: "Hands-on learning with picture cards" },
+      { src: "/images/gallery-9.jpg", alt: "Practising with knobbed cylinders" },
+      { src: "/images/gallery-6.jpg", alt: "Building the pink tower, layer by layer" },
+      { src: "/images/gallery-13.jpg", alt: "Matching sandpaper letters" },
+      { src: "/images/gallery-19.jpg", alt: "Mastering the dressing frame" },
+      { src: "/images/gallery-5.jpg", alt: "Working with a tree puzzle" },
+      { src: "/images/gallery-3.jpg", alt: "Hands-on learning with picture cards" },
     ],
   },
   {
@@ -185,8 +188,8 @@ export const PROGRAMS: Program[] = [
     title: "Primary School",
     headline: "Strong foundations, joyful beginnings",
     href: "/academics/primary",
-    heroImage: "https://scholarshassan.com/img/home-welcome.jpg",
-    collageImage: "https://scholarshassan.com/img/primarysch.png",
+    heroImage: "/images/hero-campus.jpg",
+    collageImage: "/images/program-primary.jpg",
     intro:
       "The foundational stage where children build core skills in language, mathematics, science and social life — with joy.",
     chips: [
@@ -196,10 +199,10 @@ export const PROGRAMS: Program[] = [
       "Confidence that grows",
     ],
     images: [
-      { src: "https://scholarshassan.com/img/2.png", alt: "Learning through sequencing materials" },
-      { src: "https://scholarshassan.com/img/16.png", alt: "Exploring letters and words" },
-      { src: "https://scholarshassan.com/img/home-welcome.jpg", alt: "Our welcoming campus" },
-      { src: "https://scholarshassan.com/img/4.png", alt: "Discovery with visual learning materials" },
+      { src: "/images/gallery-2.jpg", alt: "Learning through sequencing materials" },
+      { src: "/images/gallery-16.jpg", alt: "Exploring letters and words" },
+      { src: "/images/hero-campus.jpg", alt: "Our welcoming campus" },
+      { src: "/images/gallery-4.jpg", alt: "Discovery with visual learning materials" },
     ],
   },
   {
@@ -209,8 +212,8 @@ export const PROGRAMS: Program[] = [
     title: "Higher Primary",
     headline: "Growing into independent thinkers",
     href: "/academics/higher-primary",
-    heroImage: "https://scholarshassan.com/img/abt%20us.jpg",
-    collageImage: "https://scholarshassan.com/img/higherpri.png",
+    heroImage: "/images/about-students.jpg",
+    collageImage: "/images/program-higherprimary.jpg",
     intro:
       "A pivotal stage where learners refine their skills, explore new subjects and develop a clearer sense of who they are.",
     chips: [
@@ -220,10 +223,10 @@ export const PROGRAMS: Program[] = [
       "High-school ready",
     ],
     images: [
-      { src: "https://scholarshassan.com/img/abt%20us.jpg", alt: "Students growing together" },
-      { src: "https://scholarshassan.com/img/14.png", alt: "Focused, hands-on practice" },
-      { src: "https://scholarshassan.com/img/10.png", alt: "Precision and concentration" },
-      { src: "https://scholarshassan.com/img/Mission.JPG", alt: "Celebrating milestones as one school" },
+      { src: "/images/about-students.jpg", alt: "Students growing together" },
+      { src: "/images/gallery-14.jpg", alt: "Focused, hands-on practice" },
+      { src: "/images/gallery-10.jpg", alt: "Precision and concentration" },
+      { src: "/images/trust-event.jpg", alt: "Celebrating milestones as one school" },
     ],
   },
   {
@@ -233,8 +236,8 @@ export const PROGRAMS: Program[] = [
     title: "High School",
     headline: "From learners to leaders",
     href: "/academics/high-school",
-    heroImage: "https://scholarshassan.com/img/Mission.JPG",
-    collageImage: "https://scholarshassan.com/img/highschool.png",
+    heroImage: "/images/trust-event.jpg",
+    collageImage: "/images/program-highschool.jpg",
     intro:
       "A defining chapter where intellectual rigour meets real-world readiness — every class a step toward the future.",
     chips: [
@@ -244,14 +247,15 @@ export const PROGRAMS: Program[] = [
       "Life-ready skills",
     ],
     images: [
-      { src: "https://scholarshassan.com/img/Mission.JPG", alt: "Proud moments on stage" },
-      { src: "https://scholarshassan.com/img/18.png", alt: "Care, focus and craftsmanship" },
-      { src: "https://scholarshassan.com/img/home-welcome.jpg", alt: "Campus life at Scholars'" },
-      { src: "https://scholarshassan.com/img/abt%20us.jpg", alt: "Learning side by side" },
+      { src: "/images/trust-event.jpg", alt: "Proud moments on stage" },
+      { src: "/images/gallery-18.jpg", alt: "Care, focus and craftsmanship" },
+      { src: "/images/hero-campus.jpg", alt: "Campus life at Scholars'" },
+      { src: "/images/about-students.jpg", alt: "Learning side by side" },
     ],
   },
 ];
 
+// ---------- Facilities ----------
 export const FACILITIES = [
   {
     icon: "MonitorSmartphone",
@@ -286,10 +290,10 @@ export const FACILITIES = [
 ];
 
 export const FACILITY_STRIP = [
-  { src: "https://scholarshassan.com/img/home-welcome.jpg", alt: "Our campus buildings and grounds" },
-  { src: "https://scholarshassan.com/img/12.png", alt: "Focused classroom practice" },
-  { src: "https://scholarshassan.com/img/8.png", alt: "Hands-on learning materials" },
-  { src: "https://scholarshassan.com/img/20.png", alt: "Joyful everyday moments" },
+  { src: "/images/hero-campus.jpg", alt: "Our campus buildings and grounds" },
+  { src: "/images/gallery-12.jpg", alt: "Focused classroom practice" },
+  { src: "/images/gallery-8.jpg", alt: "Hands-on learning materials" },
+  { src: "/images/gallery-20.jpg", alt: "Joyful everyday moments" },
 ];
 
 export const WHY_US = [
@@ -348,27 +352,28 @@ export const TESTIMONIALS = [
   },
 ];
 
+// ---------- Gallery (real photos from school life) ----------
 export const GALLERY_IMAGES = [
-  { src: "https://scholarshassan.com/img/1.png", alt: "Matching picture cards with focus" },
-  { src: "https://scholarshassan.com/img/2.png", alt: "Learning through sequencing materials" },
-  { src: "https://scholarshassan.com/img/3.png", alt: "Hands-on learning with picture cards" },
-  { src: "https://scholarshassan.com/img/4.png", alt: "Discovery with visual materials" },
-  { src: "https://scholarshassan.com/img/5.png", alt: "Working with a tree puzzle" },
-  { src: "https://scholarshassan.com/img/6.png", alt: "Building the pink tower" },
-  { src: "https://scholarshassan.com/img/7.png", alt: "Matching leaf puzzle pieces" },
-  { src: "https://scholarshassan.com/img/8.png", alt: "Reaching for the next pink tower cube" },
-  { src: "https://scholarshassan.com/img/9.png", alt: "Practising knobbed cylinders" },
-  { src: "https://scholarshassan.com/img/10.png", alt: "Placing each cylinder with care" },
-  { src: "https://scholarshassan.com/img/12.png", alt: "Focused classroom practice" },
-  { src: "https://scholarshassan.com/img/13.png", alt: "Matching sandpaper letters" },
-  { src: "https://scholarshassan.com/img/14.png", alt: "Tracing letters by touch" },
-  { src: "https://scholarshassan.com/img/16.png", alt: "Exploring letters and words" },
-  { src: "https://scholarshassan.com/img/18.png", alt: "Working with the dressing frame" },
-  { src: "https://scholarshassan.com/img/19.png", alt: "Fastening the dressing frame" },
-  { src: "https://scholarshassan.com/img/20.png", alt: "Joyful everyday moments" },
+  { src: "/images/gallery-1.jpg", alt: "Matching picture cards with focus" },
+  { src: "/images/gallery-2.jpg", alt: "Learning through sequencing materials" },
+  { src: "/images/gallery-3.jpg", alt: "Hands-on learning with picture cards" },
+  { src: "/images/gallery-4.jpg", alt: "Discovery with visual materials" },
+  { src: "/images/gallery-5.jpg", alt: "Working with a tree puzzle" },
+  { src: "/images/gallery-6.jpg", alt: "Building the pink tower" },
+  { src: "/images/gallery-7.jpg", alt: "Matching leaf puzzle pieces" },
+  { src: "/images/gallery-8.jpg", alt: "Reaching for the next pink tower cube" },
+  { src: "/images/gallery-9.jpg", alt: "Practising knobbed cylinders" },
+  { src: "/images/gallery-10.jpg", alt: "Placing each cylinder with care" },
+  { src: "/images/gallery-12.jpg", alt: "Focused classroom practice" },
+  { src: "/images/gallery-13.jpg", alt: "Matching sandpaper letters" },
+  { src: "/images/gallery-14.jpg", alt: "Tracing letters by touch" },
+  { src: "/images/gallery-16.jpg", alt: "Exploring letters and words" },
+  { src: "/images/gallery-18.jpg", alt: "Working with the dressing frame" },
+  { src: "/images/gallery-19.jpg", alt: "Fastening the dressing frame" },
+  { src: "/images/gallery-20.jpg", alt: "Joyful everyday moments" },
 ];
 
-export const GALLERY_COVER = "https://scholarshassan.com/img/12.png";
+export const GALLERY_COVER = "/images/gallery-12.jpg";
 
 export const HOME_GALLERY_PREVIEW = [
   GALLERY_IMAGES[8],
@@ -381,6 +386,7 @@ export const HOME_GALLERY_PREVIEW = [
   GALLERY_IMAGES[2],
 ];
 
+// ---------- Footer ----------
 export const FOOTER_QUICK_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Montessori", href: "/academics/montessori" },

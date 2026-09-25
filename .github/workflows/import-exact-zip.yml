@@ -1,0 +1,61 @@
+name: Import exact ZIP source
+
+on:
+  push:
+    branches:
+      - exact-zip-source
+    paths:
+      - scholars-school-website.zip
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact source branch
+        uses: actions/checkout@v4
+        with:
+          ref: exact-zip-source
+          fetch-depth: 0
+
+      - name: Extract uploaded ZIP into repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/scholars-import
+          mkdir -p /tmp/scholars-import
+          unzip -q -o scholars-school-website.zip -d /tmp/scholars-import
+
+          ROOT="$(find /tmp/scholars-import -maxdepth 3 -type f -name package.json -printf '%h\n' | head -n 1)"
+          if [ -z "$ROOT" ]; then
+            echo "Could not find package.json in uploaded ZIP"
+            exit 1
+          fi
+
+          echo "Importing source from: $ROOT"
+          rsync -a \
+            --exclude='.git/' \
+            --exclude='.env' \
+            --exclude='.env.*' \
+            --exclude='node_modules/' \
+            --exclude='.next/' \
+            --exclude='.vercel/' \
+            "$ROOT/" ./
+
+          rm -f scholars-school-website.zip
+
+      - name: Commit exact ZIP contents
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Import exact Scholars website ZIP"
+          git push origin exact-zip-source
