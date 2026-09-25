@@ -1,11 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "scholarshassan.com" },
-    ],
-  },
+  output: "standalone",
+  /* config options here */
   typescript: {
     ignoreBuildErrors: true,
   },

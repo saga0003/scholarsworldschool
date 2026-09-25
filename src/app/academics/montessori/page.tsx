@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProgramPage } from "@/components/site/program-page";
 import { PROGRAMS } from "@/lib/site-data";
 
-const program = PROGRAMS[0];
+const program = PROGRAMS[0]; // Montessori
 
 export const metadata: Metadata = {
   title: "Montessori — Early Years | Scholars' School, Hassan",

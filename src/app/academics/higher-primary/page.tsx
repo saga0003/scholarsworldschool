@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProgramPage } from "@/components/site/program-page";
 import { PROGRAMS } from "@/lib/site-data";
 
-const program = PROGRAMS[2];
+const program = PROGRAMS[2]; // Higher Primary
 
 export const metadata: Metadata = {
   title: "Higher Primary — Middle School | Scholars' School, Hassan",
